@@ -12,5 +12,8 @@ public class App {
 
         // create PitStopAgregator
         PitStopAgregator pitStopAgregator = new PitStopAgregator(reader.getJson());
+
+        System.out.println(pitStopAgregator.countPitStops());
+        System.out.println(pitStopAgregator.getTheLongestPitStopWithDriverNumber());
     }
 }

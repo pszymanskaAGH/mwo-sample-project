@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MapperToPitstopData {
 
-    public List<PitstopData> mapperToPitstopData(String jsonInString)  {
+    public static List<PitstopData> mapperToPitstopData(String jsonInString)  {
         try {
             ObjectMapper mapper = new ObjectMapper();
             return mapper.readValue(jsonInString, new TypeReference<>() {});
