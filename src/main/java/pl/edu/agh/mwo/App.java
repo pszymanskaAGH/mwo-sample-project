@@ -21,5 +21,6 @@ public class App {
         // print results
         System.out.println(pitStopAgregator.countPitStops());
         System.out.println(pitStopAgregator.getTheLongestPitStopWithDriverNumber());
+        System.out.println(pitStopAgregator.getAveragePitStopDuration());
     }
 }
