@@ -13,7 +13,7 @@ public class Calculation {
             pitStopDuration += pitstopData.getPitDuration();
         }
 
-        return "Liczba pit stopów: " + numberOfPitStops + ". Czas trwania: " + pitStopDuration + " sekund.";
+        return "Liczba pit stopów: " + numberOfPitStops + ". Czas trwania: " + (float) pitStopDuration + " sekund.";
     }
 
     public String getTheLongestPitStopWithDriverNumber(List<PitstopData> pitstopDataList) {
@@ -28,6 +28,17 @@ public class Calculation {
         }
 
         return "Czas trwania najdluzszego pitstopu: " + pitStopDuration + ". Numer kierowcy " + driverNumber;
+    }
+
+    public String getAveragePitStopDuration(List<PitstopData> pitstopDataList) {
+        double pitStopDuration = 0;
+        int numberOfPitStops = 0;
+        for (PitstopData pitstopData : pitstopDataList) {
+            pitStopDuration += pitstopData.getPitDuration();
+            numberOfPitStops++;
+        }
+        double averageTime = pitStopDuration / numberOfPitStops;
+        return "Średni czas trwania pit stopów: " + (float) averageTime + " sekund.";
     }
 
     public String getFirstPitStop(List<PitstopData> pitstopDataList) {
