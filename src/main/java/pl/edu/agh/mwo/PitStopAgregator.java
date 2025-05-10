@@ -24,5 +24,9 @@ public class PitStopAgregator {
         return calculation.getTheLongestPitStopWithDriverNumber(pitstopDataList);
     }
 
+    public String getAveragePitStopDuration() {
+        return calculation.getAveragePitStopDuration(pitstopDataList);
+    }
+
 
 }
