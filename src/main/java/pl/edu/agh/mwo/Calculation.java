@@ -29,4 +29,12 @@ public class Calculation {
 
         return "Czas trwania najdluzszego pitstopu: " + pitStopDuration + ". Numer kierowcy " + driverNumber;
     }
+
+    public String getFirstPitStop(List<PitstopData> pitstopDataList) {
+        return "Pierwszy pitStop: " + pitstopDataList.getFirst();
+    }
+
+    public String getLastPitStop(List<PitstopData> pitstopDataList) {
+        return "Ostatni pitStop: " + pitstopDataList.getLast();
+    }
 }
