@@ -35,6 +35,6 @@ public class Calculation {
     }
 
     public String getLastPitStop(List<PitstopData> pitstopDataList) {
-        return "Pierwszy pitStop: " + pitstopDataList.getLast();
+        return "Ostatni pitStop: " + pitstopDataList.getLast();
     }
 }
