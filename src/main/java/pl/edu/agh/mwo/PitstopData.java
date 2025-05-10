@@ -1,17 +1,25 @@
 package pl.edu.agh.mwo;
 
-import java.time.LocalDateTime;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PitstopData {
 
-    private final long sessionKey;
-    private final long meetingKey;
-    private final LocalDateTime date;
-    private final int driverNumber;
-    private final double pitDuration;
-    private final int lapNumber;
+    @JsonProperty("session_key")
+    private long sessionKey;
+    @JsonProperty("meeting_key")
+    private long meetingKey;
+    private String date;
+    @JsonProperty("driver_number")
+    private int driverNumber;
+    @JsonProperty("pit_duration")
+    private double pitDuration;
+    @JsonProperty("lap_number")
+    private int lapNumber;
 
-    public PitstopData(long sessionKey, long meetingKey, LocalDateTime date, int driverNumber,
+    public PitstopData() {
+    }
+
+    public PitstopData(long sessionKey, long meetingKey, String date, int driverNumber,
                        double pitDuration, int lapNumber) {
         this.sessionKey = sessionKey;
         this.meetingKey = meetingKey;
@@ -29,7 +37,7 @@ public class PitstopData {
         return meetingKey;
     }
 
-    public LocalDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -43,5 +51,17 @@ public class PitstopData {
 
     public int getLapNumber() {
         return lapNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "PitstopData{" +
+                "\nsessionKey=" + sessionKey +
+                ",\nmeetingKey=" + meetingKey +
+                ",\ndate='" + date + '\'' +
+                ",\ndriverNumber=" + driverNumber +
+                ",\npitDuration=" + pitDuration +
+                ",\nlapNumber=" + lapNumber + "\n" +
+                '}' + "\n";
     }
 }
