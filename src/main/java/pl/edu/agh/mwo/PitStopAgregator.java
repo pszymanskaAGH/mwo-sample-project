@@ -28,5 +28,13 @@ public class PitStopAgregator {
         return calculation.getAveragePitStopDuration(pitstopDataList);
     }
 
+    public String getFirstPitStop() {
+        return calculation.getFirstPitStop(pitstopDataList);
+    }
+
+    public String getLastPitStop() {
+        return calculation.getLastPitStop(pitstopDataList);
+    }
+
 
 }
