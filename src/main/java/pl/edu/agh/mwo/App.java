@@ -2,13 +2,15 @@ package pl.edu.agh.mwo;
 
 public class App {
     public static void main(String[] args) {
-        String pathToFile = "json/pit.json"; // adjust if needed
 
+        // path to file
+        String pathToFile = "json/pit.json";
+
+        // read the json from file to String
         JsonReaderFromFile reader = new JsonReaderFromFile(pathToFile);
         reader.readJsonFromFile();
 
-        String json = reader.getJson();
-        System.out.println("Loaded JSON content:");
-        System.out.println(json);
+        // create PitStopAgregator
+        PitStopAgregator pitStopAgregator = new PitStopAgregator(reader.getJson());
     }
 }
