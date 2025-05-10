@@ -13,7 +13,7 @@ public class Calculation {
             pitStopDuration += pitstopData.getPitDuration();
         }
 
-        return "Liczba pit stopów: " + numberOfPitStops + ". Czas trwania: " + pitStopDuration + "sekund.";
+        return "Liczba pit stopów: " + numberOfPitStops + ". Czas trwania: " + pitStopDuration + " sekund.";
     }
 
     public String getTheLongestPitStopWithDriverNumber(List<PitstopData> pitstopDataList) {
@@ -25,9 +25,8 @@ public class Calculation {
                 pitStopDuration = pitstopData.getPitDuration();
                 driverNumber = pitstopData.getDriverNumber();
             }
-            pitStopDuration += pitstopData.getPitDuration();
         }
 
-        return "Czas trwania najdluzszego pitstopu: " + pitStopDuration + "Numer kierowcy " + driverNumber;
+        return "Czas trwania najdluzszego pitstopu: " + pitStopDuration + ". Numer kierowcy " + driverNumber;
     }
 }
