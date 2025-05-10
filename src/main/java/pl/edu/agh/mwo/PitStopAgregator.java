@@ -4,13 +4,25 @@ import java.util.List;
 
 public class PitStopAgregator {
 
-    private List<PitstopData> pitstopDataList;
+    private final List<PitstopData> pitstopDataList;
+    private final Calculation calculation;
 
     public PitStopAgregator(String json){
-        // TODO: Add mapper from string to list of the pitstopData
+        pitstopDataList = MapperToPitstopData.mapperToPitstopData(json);
+        calculation = new Calculation();
     }
 
     public List<PitstopData> getPitstopDataList() {
         return pitstopDataList;
     }
+
+    public String countPitStops() {
+        return calculation.countPitStops(pitstopDataList);
+    }
+
+    public String getTheLongestPitStopWithDriverNumber() {
+        return calculation.getTheLongestPitStopWithDriverNumber(pitstopDataList);
+    }
+
+
 }
